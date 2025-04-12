@@ -29,27 +29,33 @@ Damage_Claims           :	Monetary value of fire damage claims submitted, in hun
 
 **4. Model used and performance**
 Residuals:
-     Min       1Q   Median       3Q      Max 
--2.64443 -0.66589  0.00145  0.68283  2.68320 
+    Min       1Q   Median       3Q      Max 
+ -2.64443 -0.66589  0.00145  0.68283  2.68320 
 
 Coefficients:
-                          Estimate Std. Error t value Pr(>|t|)    
-(Intercept)              1.940e+00  4.560e-01   4.256 2.81e-05 ***
-Fire_Intensity           9.092e-05  1.632e-05   5.569 5.78e-08 ***
-Distance_from_Fire      -5.074e-01  3.095e-02 -16.394  < 2e-16 ***
-Property_Value           5.038e-01  2.846e-02  17.701  < 2e-16 ***
-Emergency_Response_Time  9.911e-02  1.478e-02   6.707 1.02e-10 ***
-Mitigation_Measures      1.138e-01  3.659e-02   3.109  0.00206 ** 
-Humidity                 3.159e-02  3.310e-03   9.542  < 2e-16 ***
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+-------------------------------------------------------------------------------------
+| Variable                  | Estimate    | Std. Error | t value | Pr(>|t|)        |
+|---------------------------|-------------|------------|---------|-----------------|
+| (Intercept)               | 1.940e+00   | 4.560e-01  |  4.256  | 2.81e-05 ***     |
+| Fire_Intensity            | 9.092e-05   | 1.632e-05  |  5.569  | 5.78e-08 ***     |
+| Distance_from_Fire        | -5.074e-01  | 3.095e-02  | -16.394 | < 2e-16 ***      |
+| Property_Value            | 5.038e-01   | 2.846e-02  | 17.701  | < 2e-16 ***      |
+| Emergency_Response_Time   | 9.911e-02   | 1.478e-02  |  6.707  | 1.02e-10 ***     |
+| Mitigation_Measures       | 1.138e-01   | 3.659e-02  |  3.109  | 0.00206 **       |
+| Humidity                  | 3.159e-02   | 3.310e-03  |  9.542  | < 2e-16 ***      |
+-------------------------------------------------------------------------------------
 
-Residual standard error: 1.026 on 293 degrees of freedom
-Multiple R-squared:  0.7172,	Adjusted R-squared:  0.7114 
-F-statistic: 123.8 on 6 and 293 DF,  p-value: < 2.2e-16.
+Significance codes: 
+‘***’ p < 0.001, ‘**’ p < 0.01, ‘*’ p < 0.05, ‘.’ p < 0.1, ‘ ’ p ≥ 0.1
 
+Model Fit Statistics:
+- Residual standard error: **1.026** on 293 degrees of freedom  
+- Multiple R-squared: **0.7172**  
+- Adjusted R-squared: **0.7114**  
+- F-statistic: **123.8** on 6 and 293 DF  
+- p-value: **< 2.2e-16**
 
-5. Visual
+**5. Visual**
 ![Decision Tree](images/decision_tree.png)
 ![Multivariate Model](images/multivariate_model.png)
 ![Regression Tree](images/regression_tree.png)
