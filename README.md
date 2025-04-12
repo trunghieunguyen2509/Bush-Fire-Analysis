@@ -28,6 +28,11 @@ Damage_Claims           :	Monetary value of fire damage claims submitted, in hun
 - Model comparison
 
 **4. Model used and performance**
+## Regression Analysis Summary
+
+Below is the regression output that summarizes the relationship between our predictors and the dependent variable.
+
+```r
 Residuals:
      Min       1Q   Median       3Q      Max 
 -2.64443 -0.66589  0.00145  0.68283  2.68320 
@@ -45,8 +50,9 @@ Humidity                 3.159e-02  3.310e-03   9.542  < 2e-16 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 1.026 on 293 degrees of freedom
-Multiple R-squared:  0.7172,	Adjusted R-squared:  0.7114 
-F-statistic: 123.8 on 6 and 293 DF,  p-value: < 2.2e-16
+Multiple R-squared:  0.7172,  Adjusted R-squared:  0.7114 
+F-statistic: 123.8 on 6 and 293 DF,  p-value: < 2.2e-16.
+
 
 5. Visual
 ![Decision Tree](images/decision_tree.png)
