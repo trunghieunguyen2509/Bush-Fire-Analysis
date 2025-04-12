@@ -50,9 +50,11 @@ Residual standard error: 1.026 on 293 degrees of freedom
 Multiple R-squared:  0.7172,	Adjusted R-squared:  0.7114 
 F-statistic: 123.8 on 6 and 293 DF,  p-value: < 2.2e-16.
 
-**5. Visual**
-
+**5. Visual**A
+- Multivariate Model
 ![Multivariate Model](images/multivariate_model.png)
+- Regression Tree
 ![Regression Tree](images/regression_tree.png)
+- Decision tree
 ![Decision Tree](images/decision_tree.png)
 
