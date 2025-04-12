@@ -54,6 +54,8 @@ Multiple R-squared:  0.7172,  Adjusted R-squared:  0.7114
 F-statistic: 123.8 on 6 and 293 DF,  p-value: < 2.2e-16.
 
 
+
+
 5. Visual
 ![Decision Tree](images/decision_tree.png)
 ![Multivariate Model](images/multivariate_model.png)
