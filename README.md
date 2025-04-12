@@ -1,4 +1,5 @@
 **Property damage predictions using Machine Learning**
+
 **1. Project Overview**
 This project help an insurance company to predict the amount of property damage claims resulting from bushfires to ensure they maintain sufficient financial reserves for post-disaster recovery. Accurate prediction is essential for the company to manage its financial resources effectively, fulfill client expectations, and maintain operational stability in the face of disasters.
 
