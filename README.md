@@ -5,19 +5,19 @@ This project help an insurance company to predict the amount of property damage 
 
 **2. Dataset description**
 Variable	Description
-Fire_Intensity          :	The intensity of the fire measured in kilowatts per metre (kW/m), representing the heat output during the fire event.
-Distance_from_Fire      :     The distance of the building from the fire's origin in kilometres (km).
-Building_Age            :	The number of years since the building was constructed.
-Property_Value          :     The estimated value of the property in hundred thousand Australian Dollars (×10⁵ AUD).
-Population_Density      :	The number of people living per square kilometre in the area where the building is located.
-Emergency_Response_Time :	The time taken for emergency services to respond, in minutes.
-Mitigation_Measures     :	The number of proactive steps taken to reduce fire risk (e.g., fireproofing materials).
-Construction_Quality    :	Categorical variable assessing building quality: "Good" or "Bad".
-Insurance_Coverage      :	Type of insurance the property owner holds: "Fully", "Partially", or "None".
-Wind_Speed              :	Average wind speed during the bushfire event in metres per second (m/s).
-Humidity                :	Average relative humidity during the bushfire, in percentage (%).
-Temperature             :	Average temperature during the bushfire event in degrees Celsius (°C).
-Damage_Claims           :	Monetary value of fire damage claims submitted, in hundred thousand AUD (×10⁵ AUD).
+- Fire_Intensity          :	The intensity of the fire measured in kilowatts per metre (kW/m), representing the heat output during the fire event.
+- Distance_from_Fire      :     The distance of the building from the fire's origin in kilometres (km).
+- Building_Age            :	The number of years since the building was constructed.
+- Property_Value          :     The estimated value of the property in hundred thousand Australian Dollars (×10⁵ AUD).
+- Population_Density      :	The number of people living per square kilometre in the area where the building is located.
+- Emergency_Response_Time :	The time taken for emergency services to respond, in minutes.
+- Mitigation_Measures     :	The number of proactive steps taken to reduce fire risk (e.g., fireproofing materials).
+- Construction_Quality    :	Categorical variable assessing building quality: "Good" or "Bad".
+- Insurance_Coverage      :	Type of insurance the property owner holds: "Fully", "Partially", or "None".
+- Wind_Speed              :	Average wind speed during the bushfire event in metres per second (m/s).
+- Humidity                :	Average relative humidity during the bushfire, in percentage (%).
+- Temperature             :	Average temperature during the bushfire event in degrees Celsius (°C).
+- Damage_Claims           :	Monetary value of fire damage claims submitted, in hundred thousand AUD (×10⁵ AUD).
 
 **3. Project workflow**
 - Data understanding and pre-processing
