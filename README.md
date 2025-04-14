@@ -6,9 +6,9 @@ This project help an insurance company to predict the amount of property damage 
 **2. Dataset description**
 Variable	Description
 Fire_Intensity          :	The intensity of the fire measured in kilowatts per metre (kW/m), representing the heat output during the fire event.
-Distance_from_Fire      : The distance of the building from the fire's origin in kilometres (km).
+Distance_from_Fire      :     The distance of the building from the fire's origin in kilometres (km).
 Building_Age            :	The number of years since the building was constructed.
-Property_Value          : The estimated value of the property in hundred thousand Australian Dollars (×10⁵ AUD).
+Property_Value          :     The estimated value of the property in hundred thousand Australian Dollars (×10⁵ AUD).
 Population_Density      :	The number of people living per square kilometre in the area where the building is located.
 Emergency_Response_Time :	The time taken for emergency services to respond, in minutes.
 Mitigation_Measures     :	The number of proactive steps taken to reduce fire risk (e.g., fireproofing materials).
@@ -28,6 +28,10 @@ Damage_Claims           :	Monetary value of fire damage claims submitted, in hun
 - Binary Classification: High Damage Claims
 - Decision tree
 - Model comparison
+- Building Support Vector Machine Models
+- Principal component Analysis
+- Visualisation using biplot
+
 
 **4. Model used and performance**
 Residuals:
@@ -50,11 +54,12 @@ Residual standard error: 1.026 on 293 degrees of freedom
 Multiple R-squared:  0.7172,	Adjusted R-squared:  0.7114 
 F-statistic: 123.8 on 6 and 293 DF,  p-value: < 2.2e-16.
 
-**5. Visual**A
+**5. Visual**
 - Multivariate Model
 ![Multivariate Model](images/multivariate_model.png)
 - Regression Tree
 ![Regression Tree](images/regression_tree.png)
 - Decision tree
 ![Decision Tree](images/decision_tree.png)
+
 
