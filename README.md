@@ -66,7 +66,7 @@ F-statistic: 123.8 on 6 and 293 DF,  p-value: < 2.2e-16
 - Biplot
 ![Biplot](images/biplot.png)
 
-6. Insights
+**6. Insights**
 **Key Predictors of Damage Claims**
 - Properties closer to the fire’s origin incur significantly higher damage claims, likely due to greater exposure to heat and flames.
 - Higher-value properties result in larger claims, reflecting the increased cost of repair or replacement.
