@@ -1,4 +1,4 @@
-
+setwd("C:/H/W/Data science/New folder")
 #Loading the data set
 BFdata = read.csv("BushFireData.csv")
 attach(BFdata)
@@ -170,3 +170,91 @@ table(tree.pred2,testing2$Highdamage)
 tab3 <- table(tree.pred2,testing2$Highdamage)
 mis_rate2 <- (tab3[1,2]+tab3[2,1])/sum(tab3)
 mis_rate2
+
+BFD = read.csv("BushFireData.csv")
+#Encoding variables
+Highdamage = ifelse(Damage_Claims>7.5, "1","0")
+new_BFD = data.frame(BFD,Highdamage)
+new_BFD$Highdamage = as.factor(new_BFD$Highdamage)
+new_BFD$Construction_Quality = ifelse(new_BFD$Construction_Quality == "Good",1,0)
+IC_factor = factor(new_BFD$Insurance_Coverage, levels = c("None", "Partially", "Fully"))
+new_BFD$Insurance_Coverage = as.integer(IC_factor)-1
+#Remove excess variables
+new_BFD = new_BFD[,-13]
+new_BFD = new_BFD[,-1]
+
+#Divide data set into training and testing set, 70% training, 30% testing
+set.seed(1)
+tr.id = sample(1:nrow(BFD),nrow(BFD)*0.7)
+training = new_BFD[tr.id,]
+testing = new_BFD[-tr.id,]
+
+#Build support vector machines
+library(e1071)
+#linear kernel model
+set.seed(1)
+linear_svm = tune(svm,Highdamage~., data = training, kernel = "linear",
+                  scale = TRUE, ranges = list(cost = c(0.001,0.01,0.1,1,10,100)))
+summary(linear_svm)
+linear_bm = linear_svm$best.model
+summary(linear_bm)
+#prediction for linear model
+actual = testing$Highdamage
+actual
+pred1 = predict(linear_bm, newdata = testing)
+pred1
+tab1 = table(pred1,actual)
+tab1
+misrate_linear = (tab1[1,2]+tab1[2,1])/sum(tab1)
+
+#Polynomial kernel model
+set.seed(1)
+poly_svm = tune(svm,Highdamage~., data = training, kernel = "polynomial",
+                scale = TRUE, ranges = list(cost = c(0.001,0.01,0.1,1,10,100), d =c(2:5)))
+summary(poly_svm)
+poly_bm = poly_svm$best.model
+summary(poly_bm)
+#Prediction for polynomial kernel model
+pred2 = predict(poly_bm, newdata = testing)
+pred2
+tab2 = table(pred2,actual)
+tab2
+misrate_poly = (tab2[1,2]+tab2[2,1])/sum(tab2)
+
+#Radial kernel model
+set.seed(1)
+ra_svm = tune(svm,Highdamage~., data = training, kernel = "radial",
+              scale = TRUE, ranges = list(cost = c(0.001,0.01,0.1,1,10,100), gamma = c(0.5, 1, 2, 3,4)))
+summary(ra_svm)
+ra_bm = ra_svm$best.model
+summary(ra_bm)
+
+#Prediction for radial kernel model
+pred3 = predict(ra_bm, newdata = testing)
+pred3
+tab3 = table(pred3,actual)
+tab3
+misrate_ra = (tab3[1,2]+tab3[2,1])/sum(tab3)
+
+
+#compare misclassification rate between the three kernels
+misrate_linear
+misrate_poly
+misrate_ra
+
+#PCA
+PCA_BFD = BFD[,-c(1,9,10,13)]
+PCA_BFD
+#Perform PCA
+obj = prcomp(PCA_BFD,center = TRUE, scale = TRUE)
+summary(obj)
+#Loadings
+obj$rotation
+#Principal components
+head(obj$x)
+
+#First two principal components
+plot(obj$x[,1:2])
+
+#biplot
+biplot(obj,scale = 0)
