@@ -63,5 +63,26 @@ F-statistic: 123.8 on 6 and 293 DF,  p-value: < 2.2e-16
 ![Regression Tree](images/regression_tree.png)
 - Decision tree
 ![Decision Tree](images/decision_tree.png)
+- Biplot
+![Biplot](images/biplot.png)
+
+6. Insights
+**Key Predictors of Damage Claims**
+- Properties closer to the fire’s origin incur significantly higher damage claims, likely due to greater exposure to heat and flames.
+- Higher-value properties result in larger claims, reflecting the increased cost of repair or replacement.
+- Surprisingly, higher humidity is associated with increased claims. This counterintuitive finding may suggest confounding factors (such as humidity interacting with other variables like temperature or vegetation moisture) and warrants further investigation.
+- More intense fires lead to greater damage, though its correlation with claims (0.09) is weaker than other predictors.
+- Longer response times increase damage claims, as delayed intervention allows fires to cause more destruction.
+- More mitigation steps are associated with higher claims in the model, which is unexpected. Typically, mitigation reduces damage, suggesting possible data anomalies or reverse causality 
+- Significant variables: Fire_Intensity, Distance_from_Fire, Property_Value, Emergency_Response_Time, Mitigation_Measures, Humidity.
+
+**Model performance
+Regression model **
+- Significant variables: Fire_Intensity, Distance_from_Fire, Property_Value, Emergency_Response_Time, Mitigation_Measures, Humidity.
+- Adjusted R²: 0.7114 (explains 71% of variance).
+
+**Regression Tree **
+- Variables used: Distance_from_Fire, Property_Value, Humidity, Fire_Intensity, Emergency_Response_Time, Construction_Quality.
+- Test MSE: 6.414 (slightly better than linear regression).
 
 
