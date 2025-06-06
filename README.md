@@ -57,7 +57,7 @@ F-statistic: 123.8 on 6 and 293 DF,  p-value: < 2.2e-16
 ```
 
 **5. Visual**
-- Multivariate Model
+- Diagnostic plot
 
 ![Multivariate Model](images/multivariate_model.png)
 - Regression Tree
