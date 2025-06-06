@@ -58,12 +58,17 @@ F-statistic: 123.8 on 6 and 293 DF,  p-value: < 2.2e-16
 
 **5. Visual**
 - Multivariate Model
+
 ![Multivariate Model](images/multivariate_model.png)
 - Regression Tree
+
 ![Regression Tree](images/regression_tree.png)
 - Decision tree
+
 ![Decision Tree](images/decision_tree.png)
 - Biplot
+
+
 ![Biplot](images/biplot.png)
 
 **6. Insights**
