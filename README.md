@@ -1,4 +1,4 @@
-**Property damage predictions using Machine Learning**
+# Property damage predictions using Machine Learning
 
 **1. Project Overview**
 This project help an insurance company to predict the amount of property damage claims resulting from bushfires to ensure they maintain sufficient financial reserves for post-disaster recovery. Accurate prediction is essential for the company to manage its financial resources effectively, fulfill client expectations, and maintain operational stability in the face of disasters.
@@ -81,12 +81,12 @@ F-statistic: 123.8 on 6 and 293 DF,  p-value: < 2.2e-16
 - More mitigation steps are associated with higher claims in the model, which is unexpected. Typically, mitigation reduces damage, suggesting possible data anomalies or reverse causality 
 - Significant variables: Fire_Intensity, Distance_from_Fire, Property_Value, Emergency_Response_Time, Mitigation_Measures, Humidity.
 
-**Model performance
-Regression model **
+**Model performance**
+**Regression model**
 - Significant variables: Fire_Intensity, Distance_from_Fire, Property_Value, Emergency_Response_Time, Mitigation_Measures, Humidity.
 - Adjusted R²: 0.7114 (explains 71% of variance).
 
-**Regression Tree **
+**Regression Tree**
 - Variables used: Distance_from_Fire, Property_Value, Humidity, Fire_Intensity, Emergency_Response_Time, Construction_Quality.
 - Test MSE: 6.414 (slightly better than linear regression).
 
